@@ -1,0 +1,882 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    color: #868695;
+    background-color: #0E0E2C;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.page {
+    overflow-x: hidden;
+}
+
+.button {
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 180%;
+    color: #000000;
+    padding: 11px 35px;
+    background-color: #FFBE0B;
+    border: 1px solid #FFBE0B;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.button:hover {
+    background-color: transparent;
+    color: #FFBE0B;
+    outline: none;
+}
+
+/*header*/
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0 0 0;
+}
+
+.header__wrapper {
+    margin-bottom: 170px;
+}
+
+.menu-list {
+    display: flex;
+    gap: 53px;
+}
+
+.menu__list {
+    margin-left: 100px;
+}
+
+.menu-list__link {
+    position: relative;
+}
+
+.menu-list__link::after {
+    content: '';
+    position: absolute;
+    background-color: #FFFFFF;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: -6px;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s;
+}
+
+.menu-list__link:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.menu-list__link {
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+}
+
+.menu-buttons {
+    display: flex;
+    gap: 27px;
+}
+
+.menu-buttons__item-transparent {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 180%;
+    color: #FFBE0B;
+    padding: 11px 35px;
+    border: 1px solid #FFBE0B;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: all .4s;
+}
+
+.menu-buttons__item-transparent:hover {
+    background-color: #FFBE0B;
+    color: #000000;
+    border: 1px solid #FFBE0B;
+}
+
+.header-burger {
+    background-color: transparent;
+    display: none;
+}
+
+.header-burger__svg {
+    fill: #fff;
+}
+
+
+/*shopiy*/
+
+.shopify__wrapper {
+    margin-bottom: 265px;
+    padding: 50px 0 50px 0;
+    min-height: 860px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+}
+
+.form__button {
+    margin: 5px 10px;
+}
+
+.shopify__imgbox {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    right: -15%;
+    z-index: 1;
+
+    transform: translateY(-40%);
+}
+
+.shopify__img {
+    width: 100%;
+}
+
+.shopify__plate {
+    padding-bottom: 17px;
+}
+
+.plate__button {
+    cursor: default;
+    padding: 8px 17px;
+    background-color: #172656;
+    color: #3A86FF;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.shopify-content {
+    max-width: 550px;
+    z-index: 2;
+    position: relative;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 130%;
+    color: #fff;
+}
+
+.shopify-content__title {
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 130%;
+    color: #fff;
+}
+
+
+.shopify-content__title {
+    padding-bottom: 34px;
+}
+
+.shopify-content__text {
+    font-size: 16px;
+    padding-bottom: 50px;
+}
+
+.form {
+    border-radius: 18px;
+    border: 2px solid rgba(150, 150, 150, 0.24);
+    max-width: 485px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.form__img {
+    padding-right: 10px;
+}
+
+.form__control {
+    position: relative;
+    width: 50%;
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 180%;
+    color: #fff;
+    padding-right: 10px;
+}
+
+.shopify-content__form {
+    margin-bottom: 35px;
+}
+
+.approval {
+    display: flex;
+    gap: 45px;
+}
+
+.approval-item {
+    display: flex;
+    align-items: center;
+}
+
+.approval-item__text {
+    padding: 0 0 0 15px;
+}
+
+.shopify__imgContainer {
+    position: relative;
+    padding-top: 58%;
+}
+
+
+.shopify-cards__card--vertically {
+    position: absolute;
+    top: 310px;
+    right: -188px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: -12px 13px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 192px;
+    padding: 30px 15px 30px 15px;
+    z-index: 2;
+}
+
+.shopify-cards__img {
+    padding-bottom: 10px;
+}
+
+.shopify-cards__title {
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000;
+}
+
+.shopify-cards__text {
+    padding-bottom: 20px;
+}
+
+.shopify-cards__btn {
+    display: block;
+    padding: 10px 40px;
+    background-color: #3A86FF;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.shopify-cards__card--horizontally {
+    width: 438px;
+    max-height: 127px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 445px;
+    z-index: 2;
+}
+
+.shopify-cards__btn--video {
+    border-radius: 100px;
+    margin: 0;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: -22px;
+}
+
+.shopify-cards__textbox {
+    text-align: center;
+    padding: 0 22px 0 48px;
+}
+
+.shopify-cards__text--horiz {
+    padding: 0;
+}
+
+.shopify-cards__img--vert {
+    position: relative;
+    bottom: 48px;
+    left: 20px;
+}
+
+/*services*/
+
+.services {
+    margin-bottom: 117px;
+}
+
+.services__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services__img {
+    width: 60%;
+}
+
+.services__plate {
+    padding-bottom: 20px;
+}
+
+.services__title {
+    padding-bottom: 10px;
+}
+
+.indicators {
+    display: flex;
+    gap: 90px;
+}
+
+.indicators__item {
+    max-width: 180px;
+}
+
+.indicators__item--bordered {
+    padding-left: 38px;
+}
+
+.indicators__title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 130%;
+    padding-bottom: 15px;
+}
+
+.indicators__title--yellow {
+    color: #FFBE0B;
+}
+
+.indicators__title--orange {
+    color: #FB5607;
+}
+
+.indicators__item--bordered {
+    border-left: 1px solid #626276;
+}
+
+/*creative*/
+
+.creative__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 185px;
+}
+
+.creative-content {
+    max-width: 535px;
+}
+
+.creative__plate {
+    padding-bottom: 20px;
+}
+
+.creative-content__title {
+    padding-bottom: 35px;
+}
+
+.creative-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 558px;
+}
+
+.creative-item {
+    max-width: 265px;
+    border-radius: 10px;
+    padding: 25px 10px;
+    transition: all 0.5s;
+}
+
+.creative-item:hover {
+    background-color: #1A1A3D;
+}
+
+.creative-item__img {
+    margin-bottom: 30px;
+}
+
+.creative-item__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.creative-item__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 180%;
+}
+
+/*stories*/
+
+.stories__wrapper {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    margin-bottom: 275px;
+}
+
+.stories__img {
+    width: 50%;
+    height: 90%;
+}
+
+.stories-content__title {
+    padding-bottom: 90px;
+}
+
+.stories-list__item {
+    padding-bottom: 50px;
+    position: relative;
+    counter-reset: myCounter;
+}
+
+.stories-list__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    padding-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.stories-list__text {
+    font-size: 14px;
+}
+
+.stories-card {
+    position: absolute;
+    bottom: -40px;
+    left: -105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    height: 240px;
+    width: 210px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 180%;
+    color: #000000;
+}
+
+/*ads*/
+
+.ads__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 150px;
+    position: relative;
+}
+
+.ads__img {
+    width: 50%;
+}
+
+.ads__plate {
+    padding-bottom: 18px;
+}
+
+.ads-content__title {
+    padding-bottom: 35px;
+    max-width: 533px;
+}
+
+.ads-card {
+    position: absolute;
+    bottom: -60px;
+    right: -65px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px 55px 22px 35px;
+}
+
+.ads-card__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+    color: #000;
+}
+
+.ads-card__imges {
+    display: flex;
+    align-items: center;
+}
+
+.ads-card__img {
+    margin: 0px -12px;
+}
+
+/*_______________________________________________________*/
+
+.contact__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 185px;
+}
+
+.contact-textbox__title {
+    padding-bottom: 17px;
+}
+
+.contact__textbox {
+    padding-bottom: 50px;
+}
+
+.contact__form-button {
+    padding: 10px 8px;
+}
+
+/*________________________________________*/
+
+.footer__wrapper {
+    margin-bottom: 85px;
+}
+
+.menulist__item svg {
+    transition: all .5s;
+}
+
+.menulist__item svg:hover {
+    border-radius: 50%;
+    background-color: #FFBE0B;
+    width: 100%;
+}
+
+/*_____________________________________________________________*/
+
+@media (max-width:1400px) {
+    .shopify-cards__card--vertically {
+        right: -15px;
+    }
+
+    .stories-card {
+        display: none;
+    }
+}
+
+
+@media (max-width:1135px) {
+    .creative__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .creative-content__text {
+        padding-bottom: 25px;
+    }
+}
+
+@media (max-width:1024px) {
+    .services__wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 150px;
+    }
+
+    .services__img {
+        display: none;
+    }
+
+    .menu-list {
+        gap: 20px;
+    }
+}
+
+@media (max-width:992px) {
+    .menu__list {
+        margin-left: -5px;
+        gap: 15px;
+    }
+
+    .shopify-cards__card--horizontally {
+        bottom: -50px;
+        left: 255px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .shopify__wrapper {
+        justify-content: center;
+        margin-bottom: 80px;
+        padding: 0;
+    }
+
+    .shopify__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .services__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .creative__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stories__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ads-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ads-content__textbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shopify__img {
+        display: none;
+    }
+
+    .services__img {
+        display: none;
+    }
+
+    .menu__list,
+    .menu__buttons {
+        margin: 0 auto;
+        display: none;
+    }
+
+    .header-burger {
+        display: block;
+    }
+
+    .menu__logo {
+        width: 200px;
+    }
+
+    .shopify-cards__card--vertically {
+        display: none;
+    }
+
+    .shopify-cards__card--horizontally {
+        display: none;
+    }
+
+    .creative-cards {
+        justify-content: center;
+    }
+
+    .stories__wrapper {
+        margin-bottom: 100px;
+    }
+
+    .stories__img {
+        display: none;
+    }
+
+    .ads__img {
+        display: none;
+    }
+
+    .ads-card {
+        display: none;
+    }
+
+    .stories-card {
+        display: none !important;
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 130%;
+        text-align: center;
+    }
+
+    .form__button {
+        padding: 5px 20px;
+    }
+
+    .contact__form-button {
+        padding: 8px 8px;
+    }
+}
+
+@media (max-width: 473px) {
+
+    .form {
+        width: 100%;
+    }
+
+    .button {
+        padding: 10px 20px;
+    }
+
+    .shopify-cards__card--horizontally {
+        display: none;
+    }
+
+    .menulist__item svg:hover {
+        border-radius: 0%;
+        background-color: transparent;
+        width: auto;
+    }
+
+    .menu-list {
+        gap: 5px;
+    }
+
+
+
+    .form__button {
+        padding: 2px 13px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .stories-content__title {
+        padding-bottom: 50px;
+    }
+
+    .approval {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 130%;
+    }
+
+    .shopify-content__text {
+        padding-right: 30px;
+    }
+
+    .services__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form {
+        max-width: 335px;
+        display: block;
+        padding: 0;
+        border: none;
+    }
+
+    .form__img {
+        display: none;
+    }
+
+    .form__control {
+        display: none;
+    }
+
+    .form__button {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact__form {
+        width: 100%;
+    }
+
+    .footer__menu {
+        justify-content: center;
+    }
+
+    .menu-list {
+        display: none;
+    }
+
+    .indicators {
+        gap: 40px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .indicators__item--bordered {
+        border-left: none;
+        border-top: 1px solid #626276;
+        padding-top: 40px;
+        padding-left: 0;
+    }
+}
+
+@media (max-width:320px) {
+    .services__content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .services__title {
+        font-size: 2rem;
+        max-width: 300px;
+    }
+}
